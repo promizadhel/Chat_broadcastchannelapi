@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset=utf-8>
+  <title>Broadcast Channel</title>
+  <script defer src="js/broadcast.js"></script>
+
+<body>
+
+  <section id="wrapper">
+
+    <header>
+      <h1>Chat channel : <span id='channelName'></span>
+      </h1>
+    </header>
+
+    <style>
+      #txtMessage {
+        width: 80%;
+      }
+
+      .message {
+        font-weight: bold;
+      }
+
+      .message:before {
+        content: ' ';
+        color: #bbb;
+        font-size: 14px;
+      }
+
+      #messages {
+        overflow: auto;
+        min-height: 300px;
+        list-style: none;
+        padding: 0;
+      }
+
+      #messages p {
+         clear: both;
+         margin: 0;
+         overflow-x: auto;
+         overflow-y: hidden;
+      }
+
+      body {
+        font: normal 16px/20px "Helvetica Neue", Helvetica, sans-serif;
+        background: rgb(237, 237, 236);
+        margin: 0;
+        margin-top: 40px;
+        padding: 0;
+      }
+
+      section,
+      header {
+        display: block;
+      }
+
+      #wrapper {
+        width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 10px;
+        border-top: 1px solid #fff;
+        padding: 16px;
+      }
+
+      h1 {
+        padding-top: 10px;
+      }
+
+      h2 {
+        font-size: 100%;
+        font-style: italic;
+      }
+
+      header,
+      article>* {
+        margin: 10px;
+      }
+
+      #status {
+        padding: 5px;
+        color: #fff;
+        background: #ccc;
+      }
+
+      #status.fail {
+        background: #c00;
+      }
+
+      #status.success {
+        background: #0c0;
+      }
+
+      #status.offline {
+        background: #c00;
+      }
+
+      #status.online {
+        background: #0c0;
+      }
+
+      #html5badge {
+        margin-left: -30px;
+        border: 0;
+      }
+
+      #html5badge img {
+        border: 0;
+      }
+
+      .log-sender {
+         margin: 5px 0;
+         background-color: #0E88F5;
+         border-radius: 10px;
+         padding: 5px 10px;
+         font-size: smaller;
+         color: white;
+         text-align: right;
+         float: right;
+      }
+      .log-recv {
+         margin: 5px 0;
+         background-color: #DDDCE3;
+         border-radius: 10px;
+         padding: 5px 10px;
+         font-size: smaller;
+         color: black;
+         float: left;
+      }
+   </style>
+
+   <article>
+      <input type="text" id="txtName" placeholder="Name" />
+   </article>
+   <article>
+      <input type="text" id="txtMessage" placeholder="Message" />
+      <button id="sendBtn">Send</button>
+   </article>
+   <section id="messages"></section>
+   <article>
+      <!-- <button id="newTabBtn">Open new tab</button> -->
+      <button id="createPrivateChannel">Create Private Channel</button>
+      <button id="enterPrivateChannel">Enter Private Channel</button>
+   </article>
+
+  </section>
+</body>
+</head>
+
+</html>
